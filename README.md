@@ -28,19 +28,21 @@ After that, the file/folder is compressed into a .tar.gz file, and it's hashed u
 
 Then, the compressed file is split in fifteen chunks (by default) of same size. The compressed file is shreded and deleted.
 
-The command 'gocryptfs -init' is ran to generate the encrypted folder and mount it to the 'mount' folder, and move all the split files to it, and finally it unmounts.
+The command 'gocryptfs -init' is ran to generate the encrypted folder (asking you to prompt a password) and mount it to the 'mount' folder, and move all the split files to it, and finally it's unmounted.
 
 ### Executing the Decrypt Script
 
-```./auto-decrypt.sh path/to/folder```
+```./auto-decrypt.sh Encrypted_Vault```
 
 Again, if there is no 'mount' folder in the working directory, it's automatically created.
 
 The encrypted folder is unlocked and mounted to the 'mount' folder.
 
-Now the split files are moved to the working directory and are concatenated generating a .tar.gz file. The split files are shreded and delete, and the compressed file is extracted, hashed and shreded as well.
+Now the split files are moved to the working directory and are concatenated generating a .tar.gz file. 
 
-The file/folder is unencrypted in the working directory, and the stored hashes and previous generated hash are compared, if they are identical or different you are warned.
+The split files are shreded and delete, and the compressed file is extracted, hashed and shreded as well.
+
+The file/folder is unencrypted in the working directory, and the stored hash and previous generated hash are compared, warning you if they are identical or different.
 
 ## Dependencies:
 - tar
