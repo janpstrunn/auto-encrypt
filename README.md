@@ -22,9 +22,9 @@ This script does the exact opposite, just for convenience, and also checks the s
 
 ```./auto-encrypt.sh path/to/file or path/to/folder```
 
-If there is no folder called: 'mount' and 'Encrypted_Vault' in the _working directory_, it's automatically created.
+If there is no folder called: 'mount' and 'Encrypted_Vault' in the __working directory__, it's automatically created.
 
-After that, the file/folder is compressed into a .tar.gz file, and it's hashed using sha512 and stored in a 'hash.sha512' file in the _working directory_.
+After that, the file/folder is compressed into a .tar.gz file, and it's hashed using sha512 and stored in a 'hash.sha512' file in the __working directory__.
 
 Then, the compressed file is split in fifteen chunks (by default) of same size. The compressed file is shreded and deleted.
 
@@ -34,15 +34,15 @@ The command 'gocryptfs -init' is ran to generate the encrypted folder (asking yo
 
 ```./auto-decrypt.sh Encrypted_Vault```
 
-Again, if there is no 'mount' folder in the _working directory_, it's automatically created.
+Again, if there is no 'mount' folder in the __working directory__, it's automatically created.
 
 The encrypted folder is unlocked and mounted to the 'mount' folder.
 
-Now the split files are moved to the _working directory_ and are concatenated generating a .tar.gz file. 
+Now the split files are moved to the __working directory__ and are concatenated generating a .tar.gz file. 
 
 The split files are shreded and delete, and the compressed file is extracted, hashed and shreded as well.
 
-The file/folder is unencrypted in the _working directory_, and the stored hash and previous generated hash are compared, warning you if they are identical or different.
+The file/folder is unencrypted in the __working directory__, and the stored hash and previous generated hash are compared, warning you if they are identical or different.
 
 ## Dependencies:
 - tar
