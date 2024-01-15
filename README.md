@@ -16,7 +16,7 @@ It's recommended to throw everything you need to encrypt in a folder if you need
 
 This script does the exact opposite, just for convenience, and also checks the stored hash.sha512 automatically to make sure it wasn't tampered.
 
-## Step-by-Step
+## Step by Step
 
 ### Executing the Encrypt Script
 
@@ -47,3 +47,5 @@ The file/folder is unencrypted in the __working directory__, and the stored hash
 ## Dependencies:
 - tar
 - gocryptfs
+
+### Finally: HAVE GOOD PASSWORDS PRACTICES
