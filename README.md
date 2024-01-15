@@ -8,7 +8,7 @@ Simply compresses, hashes, split and encrypt a given file or folder, using:
 
 ``tar``  ``sha512sum``  ``split``  ``gocryptfs``
 
-Plus, all unused files are shreded and deleted, reimaining only the necessary.
+Plus all unused files are shreded and deleted, remaining only the necessary.
 
 This script have been configured to only accept one file/folder at once! 
 
