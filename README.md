@@ -10,17 +10,11 @@ Simply compresses, hashes, split and encrypt a given file or folder, using:
 
 This script have been configured to only accept one file/folder at once! 
 
-It's recommended to throw everything you need to encrypt in a folder if you need to encrypt multiple files.
-
-The compressed file/folder is shreded and the split files are moved to the mounted 'mount' folder and then unmounted.
-
-By default, after chosing a folder it's compressed and split in fifteen chunks.
+It's recommended to throw everything you need to encrypt in a folder if you need to encrypt multiple files!
 
 ## auto-decrypt.sh
 
 This script does the exact opposite, just for convenience, and also checks the stored hash.sha512 automatically to make sure it wasn't tampered.
-
-The compressed and split files are shreded, and the file/folder is moved to the working directory.
 
 ## Step-by-Step
 
