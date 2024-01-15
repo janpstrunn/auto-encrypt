@@ -13,11 +13,11 @@ for file in mount/${chuck_prefix}_*; do
     mv "$file" "$(basename "$file")"
 done
 cat ${chuck_prefix}_* > "${chuck_prefix}.tar.gz"
-rm ${chuck_prefix}_*
+shred -u ${chuck_prefix}_*
 tar -xzvf "${chuck_prefix}.tar.gz"
 computed_hash=$(sha512sum "${chuck_prefix}.tar.gz" | awk '{print $1}')
 stored_hash=$(cat "hash.sha512" | awk '{print $1}')
-rm "${chuck_prefix}.tar.gz"
+shred -u "${chuck_prefix}.tar.gz"
 fusermount -u mount
 if [ "$computed_hash" == "$stored_hash" ]; then
     echo "Integrity check passed. Hashes match."
