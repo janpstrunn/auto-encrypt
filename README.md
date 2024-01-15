@@ -48,4 +48,6 @@ The file/folder is unencrypted in the __working directory__, and the stored hash
 - tar
 - gocryptfs
 
-### Finally: HAVE GOOD PASSWORDS PRACTICES
+### ALWAYS HAVE GOOD PASSWORDS PRACTICES
+
+### "The biggest threat is, and will always be, the user." - *Arch Linux*.
