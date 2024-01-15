@@ -10,7 +10,7 @@ Simply compresses, split and encrypt a given file or folder, using:
 
 This script have been configured to only accept one file/folder at once. It's recommended to throw everything you need to encrypt in a folder if you need to encrypt multiple files.
 
-The amount of splitting is configurable to your like.
+By default, after chosing a folder it's compressed and split in fifteen chunks.
 
 ## auto-decrypt.sh
 
