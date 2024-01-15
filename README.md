@@ -1,10 +1,10 @@
 # Auto Encrypt
 
-A really simple way to easily compress, hash, split and encrypt files and folders by just giving it's path.
+A really simple way to easily archive, hash, split and encrypt files and folders by just giving it's path.
 
 ## auto-encrypt.sh
 
-Simply compresses, hashes, split and encrypt a given file or folder, using:
+Simply archives, hashes, split and encrypt a given file or folder, using:
 
 ``tar``  ``sha512sum``  ``split``  ``gocryptfs``
 
@@ -26,9 +26,9 @@ This script does the exact opposite, just for convenience, and also checks the s
 
 If there is no folder called: 'mount' and 'Encrypted_Vault' in the __working directory__, it's automatically created.
 
-After that, the file/folder is compressed into a .tar.gz file, and it's hashed using sha512 and stored in a 'hash.sha512' file in the __working directory__.
+After that, the file/folder is archived into a .tar.gz file, and it's hashed using sha512 and stored in a 'hash.sha512' file in the __working directory__.
 
-Then, the compressed file is split in fifteen chunks (by default) of same size. The compressed file is shreded and deleted.
+Then, the archived file is split in fifteen chunks (by default) of same size. The archived file is shreded and deleted.
 
 The command 'gocryptfs -init' is ran to generate the encrypted folder (asking you to prompt a password) and mount it to the 'mount' folder, then move all the split files to it, and finally it's unmounted.
 
@@ -42,7 +42,7 @@ The encrypted folder is unlocked and mounted to the 'mount' folder.
 
 Now the split files are moved to the __working directory__ and are concatenated generating a .tar.gz file. 
 
-The split files are shreded and delete, and the compressed file is extracted, hashed and shreded as well.
+The split files are shreded and delete, and the archived file is extracted, hashed and shreded as well.
 
 The file/folder is unencrypted in the __working directory__, and the stored hash and previous generated hash are compared, warning you if they are identical or different.
 
