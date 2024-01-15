@@ -20,7 +20,7 @@ fi
 tar -czvf "${chuck_prefix}.tar.gz" "$file2enc"
 sha512sum "${chuck_prefix}.tar.gz" > "hash.sha512"
 split -n l/15 "${chuck_prefix}.tar.gz" "${chuck_prefix}_"
-rm "${chuck_prefix}.tar.gz"
+shred -u "${chuck_prefix}.tar.gz"
 gocryptfs "$encrypted_folder" mount
 for file in "${chuck_prefix}"_*; do
     mv "$file" "mount/$(basename "$file")"
